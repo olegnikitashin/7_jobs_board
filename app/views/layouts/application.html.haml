@@ -10,4 +10,7 @@
     .container
       - flash.each do |name, msg|
         = content_tag :div, msg, class: "alert alert-info"
+
+      - Category.all.each do |category|
+        = link_to category.name, jobs_path(category: category.name)
       = yield
