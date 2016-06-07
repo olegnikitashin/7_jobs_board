@@ -63,6 +63,10 @@ body {
   color: #1D976C !important;
 }
 
+h3, h4 {
+  color: white;
+}
+
 #jobs {
   .job {
     padding: 1em 0;
@@ -76,8 +80,8 @@ body {
         color: white;
       }
     }
-    p {
-      color: rgba(250, 250, 250, 0.5);
+    p, ul, li, ol {
+      color: white;
     }
   }
 }

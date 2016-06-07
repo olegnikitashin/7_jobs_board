@@ -15,6 +15,7 @@ gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.0'
 gem 'devise', '~> 4.1', '>= 4.1.1'
+gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
