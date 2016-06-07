@@ -1,5 +1,7 @@
 class JobsController < ApplicationController
   before_action :find_job, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :job_owner, only: [:edit, :update, :destroy]
 
   def index
     if params[:category].blank?
@@ -14,18 +16,17 @@ class JobsController < ApplicationController
   end
 
   def new
-    @job = Job.new
+    @job = current_user.jobs.build
   end
 
   def create
-    @job = Job.new(jobs_params)
+    @job = current_user.jobs.build(jobs_params)
 
     if @job.save
       redirect_to @job, notice: 'A job was successfully saved!'
     else
       render :new
     end
-
   end
 
   def edit
@@ -52,6 +53,13 @@ class JobsController < ApplicationController
 
   def find_job
     @job = Job.find(params[:id])
+  end
+
+  def job_owner
+    unless @job.user_id == current_user.id
+      flash[:notice] = 'Only owners can edit their Job'
+      redirect_to root_path
+    end
   end
 
 end
