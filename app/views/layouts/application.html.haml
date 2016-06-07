@@ -16,12 +16,12 @@
             %li= link_to category.name, jobs_path(category: category.name)
         %ul.nav.navbar-nav.navbar-right
           - if user_signed_in?
-            %li= link_to 'New Job', new_job_path, class: "navbar-text navbar-right navbar-link"
-            %li= link_to 'Profile', edit_user_registration_path, class: "navbar-text navbar-right navbar-link"
-            %li= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "navbar-text navbar-right navbar-link"
+            %li= link_to 'New Job', new_job_path, class: "navbar-right navbar-link"
+            %li= link_to 'Profile', edit_user_registration_path, class: "navbar-right navbar-link"
+            %li= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "navbar-right navbar-link"
           - else
-            %li= link_to 'Sign Up', new_user_registration_path, class: "navbar-text navbar-right navbar-link"
-            %li= link_to 'Sign In', new_user_session_path, class: "navbar-text navbar-right navbar-link"
+            %li= link_to 'Sign Up', new_user_registration_path, class: "navbar-right navbar-link"
+            %li= link_to 'Sign In', new_user_session_path, class: "navbar-right navbar-link"
 
     .container
       - flash.each do |name, msg|
