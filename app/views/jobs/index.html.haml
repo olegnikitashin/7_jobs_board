@@ -1,5 +1,5 @@
 #jobs
-  - if @jobs.empty?
+  - if @jobs.empty? && !user_signed_in?
     .container
       %p
       Please
