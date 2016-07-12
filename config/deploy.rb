@@ -2,7 +2,7 @@
 lock '3.5.0'
 
 set :application, 'jobs_board'
-set :repo_url, 'git@github.com:olegnikitashin/7_jobs_board.git'
+set :repo_url, 'git@bitbucket.org:olegnikitashin/jobs_board.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
