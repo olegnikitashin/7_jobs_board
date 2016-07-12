@@ -13,7 +13,21 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'onikitashin@gmail.com'
-
+  # Default value for :scm is :git
+  # set :scm, :git
+  #
+  # Default value for :format is :pretty
+  # set :format, :pretty
+  #
+  # Default value for :log_level is :debug
+  # set :log_level, :debug
+  #
+  # Default value for :pty is false
+  # set :pty, true
+  #
+  # Default value for :linked_files is []
+  # set :linked_files, %w{config/database.yml}
+####
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
