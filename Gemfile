@@ -23,9 +23,14 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'sqlite3'
-  gem 'spring'
+  # gem 'web-console', '~> 2.0'
+  # gem 'spring'
+  gem 'capistrano', '~> 3.5'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-rails', '~> 1.1.1'
+
+  # Add this if you're using rbenv
+  gem 'capistrano-rbenv', github: "capistrano/rbenv"
 end
 
 group :production do
