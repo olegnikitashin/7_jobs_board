@@ -23,7 +23,7 @@ set :rbenv_ruby, '2.3.1'
 
 require 'capistrano/bundler'
 require 'capistrano/rails'
-require 'capistrano/passanger'
+# require 'capistrano/passanger'
 
 # require 'capistrano/rvm'
 # require 'capistrano/rbenv'
