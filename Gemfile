@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.6'
-
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -28,7 +27,7 @@ group :development do
   gem 'capistrano', '~> 3.5'
   gem 'capistrano-bundler', '~> 1.1.2'
   gem 'capistrano-rails', '~> 1.1.1'
-
+  gem 'capistrano-rails-console'
   # Add this if you're using rbenv
   gem 'capistrano-rbenv', github: "capistrano/rbenv"
 end
